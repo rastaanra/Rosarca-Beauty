@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Rosarca Beauty — Sistem K3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" data-page="beranda" href="#">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path d="M12 2C8.5 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4.5-8-8-8z"/>
+        <circle cx="12" cy="10" r="2.5" fill="white" stroke="none"/>
+      </svg>
+    </div>
+    <div>
+      <span class="nav-logo-name">PT Rosarca Beauty</span>
+      <span class="nav-logo-sub">Keselamatan &amp; Kesehatan Kerja</span>
+    </div>
+  </a>
+  <ul class="nav-menu">
+    <li><a data-page="beranda"      href="#" class="active">Beranda</a></li>
+    <li><a data-page="profil-hukum" href="#">Profil &amp; Dasar Hukum</a></li>
+    <li><a data-page="zonasi"       href="#">Denah &amp; Zonasi</a></li>
+    <li><a data-page="analisis"     href="#">Analisis K3</a></li>
+    <li><a data-page="detail-apd"   href="#">APD &amp; Fasilitas</a></li>
+    <li><a data-page="video"        href="#">Video P3K</a></li>
+  </ul>
+  <div class="nav-badge">K3 Kosmetik</div>
+</nav>
+
+<div id="page-content" class="page-wrap active">
+  <div class="page-loading">Memuat halaman…</div>
+</div>
+
+<script>
+  const pages = {
+    'beranda':      'pages/beranda.html',
+    'profil-hukum': 'pages/profil-hukum.html',
+    'zonasi':       'pages/zonasi.html',
+    'analisis':     'pages/analisis.html',
+    'detail-apd':   'pages/detail-apd.html',
+    'video':        'pages/video.html',
+  };
+
+  const cache = {};
+  const content = document.getElementById('page-content');
+
+  async function showPage(id) {
+    if (!pages[id]) id = 'beranda';
+
+    // Update nav active state
+    document.querySelectorAll('[data-page]').forEach(el => {
+      el.classList.toggle('active', el.dataset.page === id);
+    });
+
+    // Show loading only if not cached
+    if (!cache[id]) {
+      content.innerHTML = '<div class="page-loading">Memuat halaman…</div>';
+    }
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Fetch & cache
+    if (!cache[id]) {
+      try {
+        const res = await fetch(pages[id]);
+        cache[id] = await res.text();
+      } catch (e) {
+        content.innerHTML = '<div class="page-loading">Gagal memuat halaman.</div>';
+        return;
+      }
+    }
+
+    content.innerHTML = cache[id];
+    setTimeout(() => runReveal(), 60);
+    setTimeout(() => rebindTabs(), 60);
+  }
+
+  function runReveal() {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.07 });
+    content.querySelectorAll('.reveal:not(.visible)').forEach(el => io.observe(el));
+  }
+
+  function rebindTabs() {
+    content.querySelectorAll('[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.group;
+        const tab   = btn.dataset.tab;
+        content.querySelectorAll(`[data-group="${group}"][data-tab]`).forEach(b => b.classList.remove('active'));
+        content.querySelectorAll(`[data-group="${group}"][data-panel]`).forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const panel = content.querySelector(`[data-group="${group}"][data-panel="${tab}"]`);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  }
+
+  // Global click handler for [data-page] links inside loaded content
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-page]');
+    if (!el) return;
+    e.preventDefault();
+    showPage(el.dataset.page);
+  });
+
+  // Initial load
+  showPage('beranda');
+</script>
+
+</body>
+</html>
