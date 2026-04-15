@@ -78,6 +78,7 @@
     content.innerHTML = cache[id];
     setTimeout(() => runReveal(), 60);
     setTimeout(() => rebindTabs(), 60);
+    setTimeout(() => initCarousel(), 60);
   }
 
   function runReveal() {
@@ -100,6 +101,42 @@
         const panel = content.querySelector(`[data-group="${group}"][data-panel="${tab}"]`);
         if (panel) panel.classList.add('active');
       });
+    });
+  }
+
+  function initCarousel() {
+    const slider  = content.querySelector('#ttvid-slider');
+    const btnPrev = content.querySelector('#ttvid-prev');
+    const btnNext = content.querySelector('#ttvid-next');
+    const dots    = content.querySelectorAll('.ttvid-dot');
+
+    // Hanya jalankan jika elemen carousel ada di halaman ini
+    if (!slider || !btnPrev || !btnNext) return;
+
+    const total = dots.length;
+    let current = 0;
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      slider.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    btnPrev.addEventListener('click', function() { goTo(current - 1); });
+    btnNext.addEventListener('click', function() { goTo(current + 1); });
+
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() { goTo(Number(d.dataset.idx)); });
+    });
+
+    // Swipe support (touch)
+    var startX = 0;
+    slider.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend',   function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
     });
   }
 

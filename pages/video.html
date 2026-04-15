@@ -1,133 +1,206 @@
 <!-- pages/video.html -->
 
 <div class="sec sec-dark">
-  <div class="sec-hdr reveal">
-    <div>
-      <div class="sec-label">Penanganan Darurat</div>
-      <div class="sec-title">Video <em>P3K</em> &amp; Tanggap Darurat</div>
-      <div class="sec-desc">Panduan visual pertolongan pertama pada kecelakaan kerja — wajib dipahami seluruh karyawan PT Rosarca Beauty sebelum memulai aktivitas di area produksi.</div>
-    </div>
-  </div>
-
-  <div class="video-wrap reveal">
-    <div class="video-frame">
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/rBDOrPU5hxM?rel=0&modestbranding=1"
-          title="Panduan P3K - Pertolongan Pertama pada Kecelakaan Kerja"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="video-cap">
-        <h4>Pertolongan Pertama pada Kecelakaan Kerja (P3K)</h4>
-        <p>Panduan penanganan darurat di lingkungan industri — luka kimia, luka bakar, evakuasi korban.<br>
-        💡 Ganti ID video: ubah <code>rBDOrPU5hxM</code> di src iframe dengan ID video YouTube pilihan kelompok.</p>
+    <div class="sec-hdr reveal">
+      <div>
+        <div class="sec-label">Penanganan Darurat</div>
+        <div class="sec-title">Video <em>P3K</em> &amp; Tanggap Darurat</div>
+        <div class="sec-desc">Panduan visual pertolongan pertama pada kecelakaan kerja — wajib dipahami seluruh karyawan PT Rosarca Beauty sebelum memulai aktivitas di area produksi.</div>
       </div>
     </div>
-
-    <div class="video-info">
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+  
+    <!-- VIDEO TIKTOK CAROUSEL + INFO CARDS -->
+    <div class="ttvid-layout reveal">
+  
+      <!-- KIRI: Info Cards -->
+      <div class="video-info">
+        <div class="vinfo-card">
+          <div class="vinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h5>Mengapa P3K Penting?</h5>
+          <p>Penanganan cepat dalam menit pertama setelah kecelakaan dapat menentukan keselamatan jiwa. Semua karyawan wajib memahami prosedur P3K dasar di area kerja masing-masing.</p>
         </div>
-        <h5>Mengapa P3K Penting?</h5>
-        <p>Penanganan cepat dalam menit pertama setelah kecelakaan dapat menentukan keselamatan jiwa. Semua karyawan wajib memahami prosedur P3K dasar di area kerja masing-masing.</p>
-      </div>
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M12 9v4m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"/>
-          </svg>
+        <div class="vinfo-card">
+          <div class="vinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 9v4m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"/>
+            </svg>
+          </div>
+          <h5>Skenario Darurat Kosmetik</h5>
+          <p>Paparan bahan kimia korosif, luka bakar termal, kecelakaan mesin filling, dan tergelincir di lantai basah adalah skenario paling umum di industri kosmetik.</p>
         </div>
-        <h5>Skenario Darurat Kosmetik</h5>
-        <p>Paparan bahan kimia korosif, luka bakar termal, kecelakaan mesin filling, dan tergelincir di lantai basah adalah skenario paling umum di industri kosmetik yang harus dikuasai prosedurnya.</p>
-      </div>
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
+        <div class="vinfo-card">
+          <div class="vinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h5>Titik Kumpul &amp; Evakuasi</h5>
+          <p>Assembly Point berlokasi di luar bangunan area depan (zona hijau). Simulasi evakuasi dilakukan minimal 2× setahun dengan skenario khusus zona merah.</p>
         </div>
-        <h5>Titik Kumpul &amp; Evakuasi</h5>
-        <p>Assembly Point berlokasi di luar bangunan area depan (zona hijau). Simulasi evakuasi dilakukan minimal 2× setahun dengan skenario khusus zona merah yang memiliki risiko tertinggi.</p>
+      </div>
+  
+      <!-- TENGAH: TikTok Carousel -->
+      <div class="ttvid-carousel-wrap">
+        <div class="ttvid-slider" id="ttvid-slider">
+  
+          <!-- VIDEO 1 — ganti src dengan link embed TikTok/YouTube pilihan -->
+          <div class="ttvid-slide">
+            <div class="ttvid-frame">
+              <div class="ttvid-embed">
+                <iframe
+                src="https://www.tiktok.com/embed/v2/https://vm.tiktok.com/ZS9Lm9wUmb8Pf-lulyM/"
+                title="Video Simulasi P3 Kebakaran Ringan"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="ttvid-cap">
+                <span class="ttvid-num">01 / 03</span>
+                <h4>Prosedur APAR &amp; Pemadaman Api</h4>
+                <p>Cara penggunaan alat pemadam api ringan yang benar sesuai standar K3 &amp; evakuasi korban di area industri</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- VIDEO 2 — ganti src dengan link embed TikTok/YouTube pilihan -->
+          <div class="ttvid-slide">
+            <div class="ttvid-frame">
+              <div class="ttvid-embed">
+                <iframe
+                src="https://www.tiktok.com/embed/v2/https://vt.tiktok.com/ZSHqmtVtG/"
+                title="Video Simulasi P3 Kecelakaan Bahan Kimia"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="ttvid-cap">
+                <span class="ttvid-num">02 / 03</span>
+                <h4>Pertolongan Pertama pada Kecelakaan</h4>
+                <p>Penanganan luka kimia, luka bakar &amp; evakuasi korban di area industri</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- VIDEO 3 — ganti src dengan link embed TikTok/YouTube pilihan -->
+          <div class="ttvid-slide">
+            <div class="ttvid-frame">
+              <div class="ttvid-embed">
+                <iframe
+                src="https://www.tiktok.com/embed/v2/https://vt.tiktok.com/ZSHqmavnG/"
+                title="Video Simulasi P3 Cidera Alat Gerak"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="ttvid-cap">
+                <span class="ttvid-num">03 / 03</span>
+                <h4>Evakuasi Medis &amp; Stabilisasi Korban</h4>
+                <p>Prosedur pemindahan korban dari area kerja (Hot Zone) dan penanganan pertama sebelum dirujuk ke fasilitas kesehatan.</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Navigasi Carousel -->
+        <div class="ttvid-nav">
+          <button class="ttvid-btn" id="ttvid-prev" aria-label="Video sebelumnya">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <div class="ttvid-dots" id="ttvid-dots">
+            <span class="ttvid-dot active" data-idx="0"></span>
+            <span class="ttvid-dot" data-idx="1"></span>
+            <span class="ttvid-dot" data-idx="2"></span>
+          </div>
+          <button class="ttvid-btn" id="ttvid-next" aria-label="Video berikutnya">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+  
+        <p class="ttvid-hint">💡 Ganti src iframe dengan link embed TikTok: <code>https://www.tiktok.com/embed/v2/ID_VIDEO</code></p>
+      </div>
+  
+    </div>
+  </div>
+  
+  <!-- PROSEDUR P3K -->
+  <div class="sec">
+    <div class="sec-hdr reveal">
+      <div>
+        <div class="sec-label">Prosedur Penanganan</div>
+        <div class="sec-title">Langkah <em>P3K</em> per Skenario</div>
+        <div class="sec-desc">Tindakan pertolongan pertama yang harus dilakukan berdasarkan jenis kecelakaan yang paling umum terjadi di industri kosmetik.</div>
+      </div>
+    </div>
+  
+    <div class="grid-2 reveal">
+      <div class="card card-white" style="border-left:4px solid #e11d48">
+        <h4>🧪 Paparan Bahan Kimia</h4>
+        <p>
+          <strong>Kulit:</strong> Segera bilas dengan air mengalir minimal 15–20 menit. Lepas pakaian terkontaminasi. Jangan gunakan penetral kimia.<br><br>
+          <strong>Mata:</strong> Gunakan eye wash station terdekat (maks. 10 detik dari sumber bahaya). Bilas dari sudut dalam ke luar selama 15 menit. Segera ke dokter.<br><br>
+          <strong>Terhirup:</strong> Pindahkan korban ke udara segar. Longgarkan pakaian ketat. Berikan oksigen jika tersedia. Panggil medis segera.
+        </p>
+      </div>
+      <div class="card card-white" style="border-left:4px solid #f59e0b">
+        <h4>🔥 Luka Bakar Termal</h4>
+        <p>
+          <strong>Luka Bakar Ringan:</strong> Dinginkan dengan air mengalir (bukan es) selama 10–20 menit. Tutup dengan perban steril atau kain bersih. Jangan pecahkan lepuhan.<br><br>
+          <strong>Luka Bakar Berat:</strong> Jangan lepas pakaian yang menempel. Tutup dengan kain basah bersih. Posisikan korban berbaring. Panggil ambulans segera dan jangan berikan makan/minum.
+        </p>
+      </div>
+      <div class="card card-white" style="border-left:4px solid var(--pmid)">
+        <h4>⚙️ Kecelakaan Mesin</h4>
+        <p>
+          <strong>Terjepit/Tertimpa:</strong> Hentikan mesin dengan tombol emergency stop. Jangan tarik korban paksa. Stabilkan posisi. Panggil tim P3K dan evakuasi medis.<br><br>
+          <strong>Luka Sayat/Benda Tajam:</strong> Tekan luka dengan kain bersih untuk menghentikan perdarahan. Jangan cabut benda asing yang tertancap. Tinggikan posisi luka jika memungkinkan.
+        </p>
+      </div>
+      <div class="card card-white" style="border-left:4px solid #22c55e">
+        <h4>🚨 Prosedur Evakuasi Kebakaran</h4>
+        <p>
+          <strong>Saat Alarm Berbunyi:</strong> Hentikan semua aktivitas, matikan peralatan. Jangan panik dan pakai APD minimal.<br><br>
+          <strong>Evakuasi:</strong> Ikuti jalur evakuasi yang ditandai (tidak menggunakan lift). Tutup pintu tapi tidak dikunci. Berkumpul di Assembly Point dan lakukan absensi.<br><br>
+          <strong>Jika Terjebak:</strong> Tutup celah pintu dengan kain. Beri sinyal dari jendela. Tetap rendah (asap naik ke atas).
+        </p>
       </div>
     </div>
   </div>
-</div>
-
-<!-- PROSEDUR P3K -->
-<div class="sec">
-  <div class="sec-hdr reveal">
-    <div>
-      <div class="sec-label">Prosedur Penanganan</div>
-      <div class="sec-title">Langkah <em>P3K</em> per Skenario</div>
-      <div class="sec-desc">Tindakan pertolongan pertama yang harus dilakukan berdasarkan jenis kecelakaan yang paling umum terjadi di industri kosmetik.</div>
-    </div>
-  </div>
-
-  <div class="grid-2 reveal">
-    <div class="card card-white" style="border-left:4px solid #e11d48">
-      <h4>🧪 Paparan Bahan Kimia</h4>
-      <p>
-        <strong>Kulit:</strong> Segera bilas dengan air mengalir minimal 15–20 menit. Lepas pakaian terkontaminasi. Jangan gunakan penetral kimia.<br><br>
-        <strong>Mata:</strong> Gunakan eye wash station terdekat (maks. 10 detik dari sumber bahaya). Bilas dari sudut dalam ke luar selama 15 menit. Segera ke dokter.<br><br>
-        <strong>Terhirup:</strong> Pindahkan korban ke udara segar. Longgarkan pakaian ketat. Berikan oksigen jika tersedia. Panggil medis segera.
-      </p>
-    </div>
-    <div class="card card-white" style="border-left:4px solid #f59e0b">
-      <h4>🔥 Luka Bakar Termal</h4>
-      <p>
-        <strong>Luka Bakar Ringan:</strong> Dinginkan dengan air mengalir (bukan es) selama 10–20 menit. Tutup dengan perban steril atau kain bersih. Jangan pecahkan lepuhan.<br><br>
-        <strong>Luka Bakar Berat:</strong> Jangan lepas pakaian yang menempel. Tutup dengan kain basah bersih. Posisikan korban berbaring. Panggil ambulans segera dan jangan berikan makan/minum.
-      </p>
-    </div>
-    <div class="card card-white" style="border-left:4px solid var(--pmid)">
-      <h4>⚙️ Kecelakaan Mesin</h4>
-      <p>
-        <strong>Terjepit/Tertimpa:</strong> Hentikan mesin dengan tombol emergency stop. Jangan tarik korban paksa. Stabilkan posisi. Panggil tim P3K dan evakuasi medis.<br><br>
-        <strong>Luka Sayat/Benda Tajam:</strong> Tekan luka dengan kain bersih untuk menghentikan perdarahan. Jangan cabut benda asing yang tertancap. Tinggikan posisi luka jika memungkinkan.
-      </p>
-    </div>
-    <div class="card card-white" style="border-left:4px solid #22c55e">
-      <h4>🚨 Prosedur Evakuasi Kebakaran</h4>
-      <p>
-        <strong>Saat Alarm Berbunyi:</strong> Hentikan semua aktivitas, matikan peralatan. Jangan panik dan pakai APD minimal.<br><br>
-        <strong>Evakuasi:</strong> Ikuti jalur evakuasi yang ditandai (tidak menggunakan lift). Tutup pintu tapi tidak dikunci. Berkumpul di Assembly Point dan lakukan absensi.<br><br>
-        <strong>Jika Terjebak:</strong> Tutup celah pintu dengan kain. Beri sinyal dari jendela. Tetap rendah (asap naik ke atas).
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="footer-grid">
-    <div class="f-brand">
-      <h3>PT Rosarca Beauty — Sistem K3</h3>
-      <p>Tugas Mata Kuliah Keselamatan dan Kesehatan Kerja<br>Prodi D-IV Sistem Informasi Bisnis | Politeknik Negeri Malang</p>
-      <div class="f-tags">
-        <div class="f-tag">Video P3K</div><div class="f-tag">Tanggap Darurat</div>
-        <div class="f-tag">Evakuasi</div><div class="f-tag">Keselamatan</div>
+  
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <h3>PT Rosarca Beauty — Sistem K3</h3>
+        <p>Tugas Mata Kuliah Keselamatan dan Kesehatan Kerja<br>Prodi D-IV Sistem Informasi Bisnis | Politeknik Negeri Malang</p>
+        <div class="f-tags">
+          <div class="f-tag">Video P3K</div><div class="f-tag">Tanggap Darurat</div>
+          <div class="f-tag">Evakuasi</div><div class="f-tag">Keselamatan</div>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Navigasi</h4>
+        <a data-page="detail-apd" href="#">← APD &amp; Fasilitas</a>
+        <a data-page="beranda" href="#">🏠 Kembali ke Beranda</a>
+      </div>
+      <div class="f-col">
+        <h4>Referensi P3K</h4>
+        <a href="#">PMK No. 47/2018 (P3K)</a>
+        <a href="#">OSHA First Aid Standards</a>
+        <a href="#">ANSI Z358.1 Eye Wash</a>
+        <a href="#">ISO 11602 Fire Extinguisher</a>
       </div>
     </div>
-    <div class="f-col">
-      <h4>Navigasi</h4>
-      <a data-page="detail-apd" href="#">← APD &amp; Fasilitas</a>
-      <a data-page="beranda" href="#">🏠 Kembali ke Beranda</a>
-    </div>
-    <div class="f-col">
-      <h4>Referensi P3K</h4>
-      <a href="#">PMK No. 47/2018 (P3K)</a>
-      <a href="#">OSHA First Aid Standards</a>
-      <a href="#">ANSI Z358.1 Eye Wash</a>
-      <a href="#">ISO 11602 Fire Extinguisher</a>
+    <div class="f-bottom">
+      <div class="f-copy">© 2026 Kelompok 3 · Atha · Rasta · Hernanda · Sally | Politeknik Negeri Malang</div>
     </div>
   </div>
-  <div class="f-bottom">
-    <div class="f-copy">© 2026 Kelompok 3 · Atha · Rasta · Hernanda · Sally | Politeknik Negeri Malang</div>
-  </div>
-</div>
