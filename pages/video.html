@@ -9,52 +9,33 @@
     </div>
   </div>
 
-  <div class="video-wrap reveal">
+  <div class="video-wrap">
     <div class="video-frame">
-      <div class="video-embed">
+      <div class="tiktok-frame">
+  <button class="vslide-btn vslide-prev" onclick="changeVideo(-1)">&#8249;</button>
+  <div class="tiktok-phone-wrap">
+    <div class="vslide-label-top">
+      <div class="vslide-num"><span id="vslide-current">1</span> / 4</div>
+      <div class="vslide-title" id="vslide-title">Simulasi P3K — Tersengat Listrik</div>
+      <div class="vslide-desc" id="vslide-desc">Prosedur pertolongan pertama saat korban tersengat arus listrik di area kerja industri.</div>
+    </div>
+    <div class="tiktok-phone">
+      <div class="tiktok-notch"></div>
+      <div class="tiktok-screen">
+        <div class="yt-overlay"></div>
         <iframe
-          src="https://www.youtube.com/embed/rBDOrPU5hxM?rel=0&modestbranding=1"
-          title="Panduan P3K - Pertolongan Pertama pada Kecelakaan Kerja"
+          id="video-iframe"
+          src="https://www.youtube.com/embed/Fq_CVlTjSpA?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3"
+          title="Video P3K"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
-      <div class="video-cap">
-        <h4>Pertolongan Pertama pada Kecelakaan Kerja (P3K)</h4>
-        <p>Panduan penanganan darurat di lingkungan industri — luka kimia, luka bakar, evakuasi korban.<br>
-        💡 Ganti ID video: ubah <code>rBDOrPU5hxM</code> di src iframe dengan ID video YouTube pilihan kelompok.</p>
-      </div>
+      <div class="tiktok-home-bar"></div>
     </div>
-
-    <div class="video-info">
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h5>Mengapa P3K Penting?</h5>
-        <p>Penanganan cepat dalam menit pertama setelah kecelakaan dapat menentukan keselamatan jiwa. Semua karyawan wajib memahami prosedur P3K dasar di area kerja masing-masing.</p>
-      </div>
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M12 9v4m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"/>
-          </svg>
-        </div>
-        <h5>Skenario Darurat Kosmetik</h5>
-        <p>Paparan bahan kimia korosif, luka bakar termal, kecelakaan mesin filling, dan tergelincir di lantai basah adalah skenario paling umum di industri kosmetik yang harus dikuasai prosedurnya.</p>
-      </div>
-      <div class="vinfo-card">
-        <div class="vinfo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-        </div>
-        <h5>Titik Kumpul &amp; Evakuasi</h5>
-        <p>Assembly Point berlokasi di luar bangunan area depan (zona hijau). Simulasi evakuasi dilakukan minimal 2× setahun dengan skenario khusus zona merah yang memiliki risiko tertinggi.</p>
-      </div>
+  </div>
+  <button class="vslide-btn vslide-next" onclick="changeVideo(1)">&#8250;</button>
+</div>
     </div>
   </div>
 </div>
@@ -68,37 +49,28 @@
       <div class="sec-desc">Tindakan pertolongan pertama yang harus dilakukan berdasarkan jenis kecelakaan yang paling umum terjadi di industri kosmetik.</div>
     </div>
   </div>
-
   <div class="grid-2 reveal">
     <div class="card card-white" style="border-left:4px solid #e11d48">
       <h4>🧪 Paparan Bahan Kimia</h4>
-      <p>
-        <strong>Kulit:</strong> Segera bilas dengan air mengalir minimal 15–20 menit. Lepas pakaian terkontaminasi. Jangan gunakan penetral kimia.<br><br>
-        <strong>Mata:</strong> Gunakan eye wash station terdekat (maks. 10 detik dari sumber bahaya). Bilas dari sudut dalam ke luar selama 15 menit. Segera ke dokter.<br><br>
-        <strong>Terhirup:</strong> Pindahkan korban ke udara segar. Longgarkan pakaian ketat. Berikan oksigen jika tersedia. Panggil medis segera.
-      </p>
+      <p><strong>Kulit:</strong> Segera bilas dengan air mengalir minimal 15–20 menit. Lepas pakaian terkontaminasi.<br><br>
+      <strong>Mata:</strong> Gunakan eye wash station terdekat. Bilas dari sudut dalam ke luar selama 15 menit.<br><br>
+      <strong>Terhirup:</strong> Pindahkan korban ke udara segar. Panggil medis segera.</p>
     </div>
     <div class="card card-white" style="border-left:4px solid #f59e0b">
       <h4>🔥 Luka Bakar Termal</h4>
-      <p>
-        <strong>Luka Bakar Ringan:</strong> Dinginkan dengan air mengalir (bukan es) selama 10–20 menit. Tutup dengan perban steril atau kain bersih. Jangan pecahkan lepuhan.<br><br>
-        <strong>Luka Bakar Berat:</strong> Jangan lepas pakaian yang menempel. Tutup dengan kain basah bersih. Posisikan korban berbaring. Panggil ambulans segera dan jangan berikan makan/minum.
-      </p>
+      <p><strong>Ringan:</strong> Dinginkan dengan air mengalir (bukan es) 10–20 menit. Tutup dengan perban steril.<br><br>
+      <strong>Berat:</strong> Jangan lepas pakaian yang menempel. Tutup dengan kain basah bersih. Panggil ambulans segera.</p>
     </div>
     <div class="card card-white" style="border-left:4px solid var(--pmid)">
       <h4>⚙️ Kecelakaan Mesin</h4>
-      <p>
-        <strong>Terjepit/Tertimpa:</strong> Hentikan mesin dengan tombol emergency stop. Jangan tarik korban paksa. Stabilkan posisi. Panggil tim P3K dan evakuasi medis.<br><br>
-        <strong>Luka Sayat/Benda Tajam:</strong> Tekan luka dengan kain bersih untuk menghentikan perdarahan. Jangan cabut benda asing yang tertancap. Tinggikan posisi luka jika memungkinkan.
-      </p>
+      <p><strong>Terjepit/Tertimpa:</strong> Hentikan mesin dengan tombol emergency stop. Jangan tarik korban paksa. Panggil tim P3K.<br><br>
+      <strong>Luka Sayat:</strong> Tekan luka dengan kain bersih. Jangan cabut benda asing yang tertancap.</p>
     </div>
     <div class="card card-white" style="border-left:4px solid #22c55e">
       <h4>🚨 Prosedur Evakuasi Kebakaran</h4>
-      <p>
-        <strong>Saat Alarm Berbunyi:</strong> Hentikan semua aktivitas, matikan peralatan. Jangan panik dan pakai APD minimal.<br><br>
-        <strong>Evakuasi:</strong> Ikuti jalur evakuasi yang ditandai (tidak menggunakan lift). Tutup pintu tapi tidak dikunci. Berkumpul di Assembly Point dan lakukan absensi.<br><br>
-        <strong>Jika Terjebak:</strong> Tutup celah pintu dengan kain. Beri sinyal dari jendela. Tetap rendah (asap naik ke atas).
-      </p>
+      <p><strong>Saat Alarm:</strong> Hentikan semua aktivitas, matikan peralatan.<br><br>
+      <strong>Evakuasi:</strong> Ikuti jalur evakuasi, tidak menggunakan lift. Berkumpul di Assembly Point.<br><br>
+      <strong>Jika Terjebak:</strong> Tutup celah pintu dengan kain. Tetap rendah.</p>
     </div>
   </div>
 </div>
