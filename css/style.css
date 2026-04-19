@@ -447,26 +447,115 @@ body {
 .fk-desc { font-size: 10.5px; color: var(--t3); line-height: 1.55; }
 
 /* ── VIDEO ── */
-.video-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; }
-.video-frame { background: #1a0010; border: 1px solid rgba(255,255,255,.1); border-radius: 20px; overflow: hidden; }
-.video-embed { position: relative; padding-bottom: 56.25%; height: 0; }
-.video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-.video-cap { padding: 14px 18px; border-top: 1px solid rgba(255,255,255,.07); }
-.video-cap h4 { font-size: 14px; color: #fff; margin-bottom: 4px; }
-.video-cap p  { font-size: 11px; color: rgba(255,255,255,.4); }
-.video-info { display: flex; flex-direction: column; gap: 12px; }
-.vinfo-card { background: var(--p5); border: 1px solid var(--b2); border-radius: 14px; padding: 18px; transition: all .2s; }
-.vinfo-card:hover { border-color: var(--p2); }
-.vinfo-icon { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg,var(--p1),var(--pmid)); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
-.vinfo-icon svg { width: 16px; height: 16px; }
-.vinfo-card h5 { font-size: 13px; font-weight: 700; color: var(--pdark); margin-bottom: 4px; }
-.vinfo-card p  { font-size: 11px; color: var(--t3); line-height: 1.6; }
+.tiktok-phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.sec-dark { background: linear-gradient(135deg, var(--pdark), var(--pmid)); }
-.sec-dark .sec-label { color: #fce7f3; }
-.sec-dark .sec-title { color: #fff; }
-.sec-dark .sec-title em { color: #fbcfe8; }
-.sec-dark .sec-desc  { color: rgba(255,255,255,.5); }
+.tiktok-phone {
+  width: 260px;
+  background: #0a0a0a;
+  border-radius: 44px;
+  padding: 12px 10px 16px;
+  box-shadow:
+    0 0 0 1px #2a2a2a,
+    0 0 0 3px #111,
+    0 24px 80px rgba(0,0,0,0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tiktok-notch {
+  width: 72px;
+  height: 8px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+}
+
+.tiktok-screen {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  background: #000;
+  position: relative;
+}
+
+.tiktok-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.tiktok-home-bar {
+  width: 80px;
+  height: 3px;
+  background: #444;
+  border-radius: 4px;
+  margin: 6px auto 0;
+}
+
+.tiktok-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.vslide-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: #cf477b;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.vslide-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.vslide-label-top {
+  text-align: center;
+  padding: 0 8px 12px;
+  max-width: 260px;
+}
+
+.vslide-label-top .vslide-num {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.vslide-label-top .vslide-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #cb3b7c;
+  margin-bottom: 4px;
+}
+
+.vslide-label-top .vslide-desc {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+
+.video-wrap {
+  display: flex;
+  justify-content: center;
+}
 
 /* ── NOTE CARD ── */
 .note-card {
