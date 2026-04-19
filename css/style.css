@@ -205,6 +205,28 @@ body {
 .sec-desc { font-size: 13px; color: var(--t3); max-width: 540px; line-height: 1.78; margin-bottom: 28px; }
 .sec-hdr { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
 
+/* Denah Image */
+.denah-wrap {
+  margin: 2rem auto 3rem;
+  max-width: 860px;
+  text-align: center;
+}
+
+.denah-img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1.5px solid #f3d0dd;
+  box-shadow: 0 8px 32px rgba(190, 18, 60, 0.10);
+  display: block;
+}
+
+.denah-caption {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
 /* ── CARDS GENERIC ── */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
